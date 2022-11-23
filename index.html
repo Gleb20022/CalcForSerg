@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcCalories</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="calc">
+        <div class="container">
+            <h2 class="title">Калькулятор калорий</h2>
+
+            <div class="calc__field">
+                <div class="calc__subtitle"> Gender</div>               
+                <div class="calc__choose" id="gender">
+                    <div id="female" class="calc__choose-item">Woman</div>
+                    <div id="male" class="calc__choose-item calc__choose-item_active">Man</div>
+                </div>
+
+                <div class="calc__subtitle">
+                    Anthropometry
+                </div>
+                <div class="calc__choose calc__choose_medium">
+                    <input type="text" id="height" placeholder="Введите рост" class="calc__choose-item">
+                    <input type="text" id="weight" placeholder="Введите вес"  class="calc__choose-item">
+                    <input type="text" id="age" placeholder="Введите возраст" class="calc__choose-item">
+                </div>
+    
+                <div class="calc__subtitle">
+                    Physical activity
+                </div>
+                <div class="calc__choose calc__choose_big">
+                    <div data-ratio="1.2" id="low" class="calc__choose-item">Низкая активность </div>
+                    <div data-ratio="1.375" id="small"  class="calc__choose-item calc__choose-item_active">Невысокая активность</div>
+                    <div data-ratio="1.55" id="medium" class="calc__choose-item">Умеренная активность</div>
+                    <div data-ratio="1.725" id="high" class="calc__choose-item">Высокая активность</div>
+                </div>
+    
+                <div class="calc__divider"></div>
+    
+                <div class="calc__total">
+                    <div class="calc__subtitle">
+                        Daily calorie intake:
+                    </div>
+                    <div class="calc__result">
+                        <span>____</span> ккал
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+ <script src="js/script.js"></script>   
+</body>
+</html>
