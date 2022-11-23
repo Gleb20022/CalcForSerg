@@ -103,3 +103,20 @@ div {
 .calc__result span {
     font-size: 42px;
 }
+
+.calc__end {
+    width: 490px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calc__res {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.calc__res span {
+    font-size: 42px;
+}

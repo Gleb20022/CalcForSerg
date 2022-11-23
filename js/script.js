@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', function() {
 
 const result = document.querySelector('.calc__result span');
+const res = document.querySelector('.calc__res span');
 
     let sex, height, weight, age, ratio;
 
@@ -46,6 +47,7 @@ const result = document.querySelector('.calc__result span');
         } else {
             result.textContent = Math.round((88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age)) * ratio);
         }
+
     }
 
     calcTotal();
@@ -70,6 +72,7 @@ const result = document.querySelector('.calc__result span');
                 e.target.classList.add(activeClass);
     
                 calcTotal();
+                calcWater();
             });
         });
     }
@@ -101,10 +104,23 @@ const result = document.querySelector('.calc__result span');
             }
 
             calcTotal();
+            calcWater();
         });
     }
+
+    function calcWater() {
+        if (!weight) {
+            res.textContent = '_____';
+            return;
+        } else {
+            res.textContent = Math.round((weight / 3) * 2);
+        }
+    }
+
+    calcWater();
 
     getDynamicInformation('#height');
     getDynamicInformation('#weight');
     getDynamicInformation('#age');
 });
+
